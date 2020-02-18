@@ -1,0 +1,5 @@
+select count(*) from(
+	select userId, count(login_date)
+	from i_user_login_logs
+	group by userId
+	having count(login_date) > 3);

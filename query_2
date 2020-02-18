@@ -1,0 +1,6 @@
+select userId, emailaddress
+from i_users
+where userId != 1 and userId == (select userId
+				 from i_user_login_logs
+				 order by userId
+				 desc limit 1);
