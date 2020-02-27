@@ -1,4 +1,4 @@
-select userId, emailaddress
+select userId, username , emailaddress
 from i_users
 where userId != 1 and userId == (select userId
 				 from i_user_login_logs
